@@ -33,3 +33,9 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+        # カスタムネーミングストラテジーの定義
+    doctrine.orm.naming_strategy.underscore_number_aware:
+        class: Doctrine\ORM\Mapping\UnderscoreNamingStrategy
+        arguments:
+            - CASE_LOWER  # または CASE_UPPER
+            - true        # $numberAware を true に設定
