@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <div class="row">
+        <a class="btn btn-primary" href="{{ path('blog_index') }}">トップに戻る</a>
+    </div>
+    <h1>API Data</h1>
+    <ul>
+        {% for item in data %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
